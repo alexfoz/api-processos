@@ -22,17 +22,13 @@ function buscarTodosProcessos() {
     return processos;
 }
 
-    //console.log(buscarTodosProcessos());*/
-
-function buscarProcessoPorNumero() {
-
-    const processo = processos.find((p) => {
-
-        return p.numero === 102;
-
+function buscarProcessoPorNumero(numero) {
+    return processos.find(function (processo) {
+        return processo.numero === numero;
     });
-
-    return processo;
 }
 
-console.log(buscarProcessoPorNumero().numero);
+module.exports = {
+    buscarTodosProcessos,
+    buscarProcessoPorNumero
+};
